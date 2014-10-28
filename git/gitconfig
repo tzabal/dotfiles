@@ -1,0 +1,10 @@
+[user]
+	name = Tzanetos Balitsaris
+	email = tzabal@freebsd.org
+[color]
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[push]
+	default = simple

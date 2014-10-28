@@ -1,0 +1,12 @@
+# .bash_profile
+#
+# When Bash is invoked as:
+# * interactive or non-interactive login shell:
+#   /etc/profile, ~/.bash_profile, ~/.bash_login, ~/.profile
+# * interactive non-login shell:
+#   ~/.bashrc
+#
+
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
