@@ -5,23 +5,32 @@
 #
 
 # Dependencies:
-# * git
-# * wget
+# * vim (CentOS: yum install vim)
+# * git (CentOS: yum install git)
+# * wget (CentOS: already installed)
 # * python2.x or python3.x
-# * pip2.x or pip3.x
+# * pip2.x or pip3.x (CentOS: yum install python-pip)
 # * ctags (CentOS: yum install ctags | FreeBSD: cd /usr/ports/devel/ctags; make config-recursive; make install clean)
 
+set -e
+
+# Vim
+mkdir -p ~/.vim
+
+# Copy the vimrc of the repository to ~/.vimrc
+cp vimrc ~/.vimrc
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 cd ~/.vim/autoload; wget https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
+# Starting installation of Vim plugins
 cd ~/.vim/bundle
 
 # MiniBufExplorer (use the updated fork)
 git clone git://github.com/fholgado/minibufexpl.vim.git
 
-# NERD tree
+# NERD tree (File manager)
 git clone git://github.com/scrooloose/nerdtree.git
 
 # Pydiction (Python Code Completion)
@@ -46,9 +55,3 @@ git clone git://github.com/sophacles/vim-bundle-mako.git
 
 # vim-html5 (HTML5 omnicompletion, indentation and syntax highlighting for Vim)
 git clone git://github.com/othree/html5.vim.git
-
-# Copy vimrc to ~/.vimrc and you are ready to go.
-
-# NOTE: If there are any visual problems when using vim inside konsole, install
-# and use the Solarized Dark coloscheme as appearance for Konsole.
-# Check: https://github.com/phiggins/konsole-colors-solarized
