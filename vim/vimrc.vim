@@ -2,6 +2,9 @@
 " Vim Feature: The Basics
 "
 
+" Ensure that Vim will behave in a more useful way
+set nocompatible
+
 " Required for pathogen plugin to work
 execute pathogen#infect()
 

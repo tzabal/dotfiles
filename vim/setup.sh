@@ -7,10 +7,10 @@
 # Dependencies:
 # * vim (CentOS: yum install vim)
 # * git (CentOS: yum install git)
-# * wget (CentOS: already installed)
+# * wget
 # * python2.x or python3.x
-# * pip2.x or pip3.x (CentOS: yum install python-pip)
-# * ctags (CentOS: yum install ctags | FreeBSD: cd /usr/ports/devel/ctags; make config-recursive; make install clean)
+# * pip2.x or pip3.x (CentOS: yum install epel-release; yum install python-pip)
+# * ctags (CentOS: yum install ctags)
 
 set -e
 
@@ -18,7 +18,7 @@ set -e
 mkdir -p ~/.vim
 
 # Copy the vimrc of the repository to ~/.vimrc
-cp vimrc ~/.vimrc
+cp vimrc.vim ~/.vimrc
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle
